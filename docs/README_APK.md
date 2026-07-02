@@ -3,7 +3,7 @@
 ## Download
 | Versi | Link | Ukuran |
 |---|---|---|
-| Release v1.0.0 | [app-release.apk](../build/app/outputs/flutter-apk/app-release.apk) | ~15MB |
+| Release v1.0.0 | [app-release.apk](../build/app/outputs/flutter-apk/app-release.apk) | ~70MB |
 
 ## Cara Install
 1. Download file APK
@@ -15,7 +15,7 @@
 ## Persyaratan
 - Android 6.0 (API 23) ke atas
 - RAM minimal 2GB
-- Storage 50MB
+- Storage 70MB
 
 ## Izin Aplikasi
 | Izin | Kegunaan |
