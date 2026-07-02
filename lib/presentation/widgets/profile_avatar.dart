@@ -23,9 +23,30 @@ class ProfileAvatar extends ConsumerWidget {
           ),
           content: TextField(
             controller: controller,
-            decoration: const InputDecoration(
+            style: TextStyle(
+              color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+            ),
+            decoration: InputDecoration(
               labelText: "Nama",
+              labelStyle: TextStyle(
+                color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white70,
+              ),
               hintText: "Masukkan nama Anda",
+              hintStyle: TextStyle(
+                color: Theme.of(context).brightness == Brightness.light ? Colors.grey : Colors.white38,
+              ),
+              enabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12.0),
+                borderSide: BorderSide(
+                  color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white24,
+                ),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(12.0),
+                borderSide: BorderSide(
+                  color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+                ),
+              ),
             ),
             autofocus: true,
             textCapitalization: TextCapitalization.words,

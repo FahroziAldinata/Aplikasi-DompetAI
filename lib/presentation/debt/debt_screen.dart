@@ -187,10 +187,10 @@ class _DebtScreenState extends ConsumerState<DebtScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Total Utang",
                           style: TextStyle(
-                            color: colorScheme.onSurfaceVariant,
+                            color: Colors.white70,
                             fontSize: 11.0,
                           ),
                         ),
@@ -201,8 +201,8 @@ class _DebtScreenState extends ConsumerState<DebtScreen> {
                             loading: () => "Rp 0",
                             error: (_, __) => "Rp 0",
                           ),
-                          style: TextStyle(
-                            color: colorScheme.onSurface,
+                          style: const TextStyle(
+                            color: Colors.white,
                             fontSize: 22.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -224,10 +224,10 @@ class _DebtScreenState extends ConsumerState<DebtScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Total Piutang",
                           style: TextStyle(
-                            color: colorScheme.onSurfaceVariant,
+                            color: Colors.white70,
                             fontSize: 11.0,
                           ),
                         ),
@@ -238,8 +238,8 @@ class _DebtScreenState extends ConsumerState<DebtScreen> {
                             loading: () => "Rp 0",
                             error: (_, __) => "Rp 0",
                           ),
-                          style: TextStyle(
-                            color: colorScheme.onSurface,
+                          style: const TextStyle(
+                            color: Colors.white,
                             fontSize: 22.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -720,17 +720,26 @@ class _DebtScreenState extends ConsumerState<DebtScreen> {
               TextField(
                 controller: controller,
                 keyboardType: TextInputType.number,
-                style: TextStyle(color: colorScheme.onSurface),
+                style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
                 inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                 decoration: InputDecoration(
                   hintText: "Contoh: 50.000",
+                  hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : Colors.white38),
                   prefixText: "Rp ",
-                  prefixStyle: const TextStyle(color: Colors.white),
+                  prefixStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
                   filled: true,
                   fillColor: colorScheme.surfaceContainerHigh,
-                  border: OutlineInputBorder(
+                  enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
+                    borderSide: BorderSide(
+                      color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white24,
+                    ),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide(
+                      color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+                    ),
                   ),
                 ),
               ),
@@ -947,25 +956,21 @@ class _AddDebtSheetState extends ConsumerState<AddDebtSheet> {
           TextField(
             controller: _titleController,
             textCapitalization: TextCapitalization.sentences,
-            style: const TextStyle(color: Colors.white),
+            style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
             decoration: InputDecoration(
               labelText: "Nama Orang",
-              labelStyle: const TextStyle(color: Colors.white70),
+              labelStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white70),
               hintText: "Contoh: Budi",
-              hintStyle: const TextStyle(color: Colors.white38),
+              hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : Colors.white38),
               filled: true,
               fillColor: colorScheme.surfaceContainerHigh,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16),
-                borderSide: BorderSide.none,
-              ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
-                borderSide: const BorderSide(color: Colors.white24),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white24),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
-                borderSide: const BorderSide(color: Colors.white),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               ),
             ),
           ),
@@ -975,28 +980,24 @@ class _AddDebtSheetState extends ConsumerState<AddDebtSheet> {
           TextField(
             controller: _amountController,
             keyboardType: TextInputType.number,
-            style: const TextStyle(color: Colors.white),
+            style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
             inputFormatters: [FilteringTextInputFormatter.digitsOnly],
             decoration: InputDecoration(
               labelText: "Nominal",
-              labelStyle: const TextStyle(color: Colors.white70),
+              labelStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white70),
               hintText: "0",
-              hintStyle: const TextStyle(color: Colors.white38),
+              hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : Colors.white38),
               prefixText: "Rp ",
-              prefixStyle: const TextStyle(color: Colors.white),
+              prefixStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               filled: true,
               fillColor: colorScheme.surfaceContainerHigh,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16),
-                borderSide: BorderSide.none,
-              ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
-                borderSide: const BorderSide(color: Colors.white24),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white24),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
-                borderSide: const BorderSide(color: Colors.white),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               ),
             ),
           ),
@@ -1006,25 +1007,21 @@ class _AddDebtSheetState extends ConsumerState<AddDebtSheet> {
           TextField(
             controller: _noteController,
             textCapitalization: TextCapitalization.sentences,
-            style: const TextStyle(color: Colors.white),
+            style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
             decoration: InputDecoration(
               labelText: "Catatan (Opsional)",
-              labelStyle: const TextStyle(color: Colors.white70),
+              labelStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white70),
               hintText: "Contoh: Beli bakso",
-              hintStyle: const TextStyle(color: Colors.white38),
+              hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : Colors.white38),
               filled: true,
               fillColor: colorScheme.surfaceContainerHigh,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16),
-                borderSide: BorderSide.none,
-              ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
-                borderSide: const BorderSide(color: Colors.white24),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white24),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
-                borderSide: const BorderSide(color: Colors.white),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               ),
             ),
           ),
@@ -1048,10 +1045,12 @@ class _AddDebtSheetState extends ConsumerState<AddDebtSheet> {
                         ? "Pilih Tanggal Jatuh Tempo"
                         : "Jatuh Tempo: ${DateFormat('d MMMM yyyy').format(_dueDate!)}",
                     style: TextStyle(
-                      color: _dueDate == null ? Colors.white38 : Colors.white,
+                      color: _dueDate == null
+                          ? (Theme.of(context).brightness == Brightness.light ? Colors.black38 : Colors.white38)
+                          : (Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
                     ),
                   ),
-                  const Icon(Icons.calendar_today_rounded, size: 20, color: Colors.white70),
+                  Icon(Icons.calendar_today_rounded, size: 20, color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white70),
                 ],
               ),
             ),

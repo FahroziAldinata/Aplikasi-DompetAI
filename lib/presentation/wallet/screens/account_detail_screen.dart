@@ -909,21 +909,17 @@ class _AddAccountBottomSheetState extends ConsumerState<_AddAccountBottomSheet> 
           const SizedBox(height: 20.0),
           TextField(
             controller: _nameController,
-            style: const TextStyle(color: Colors.white),
+            style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
             decoration: InputDecoration(
               hintText: "Nama bank / e-wallet",
-              hintStyle: const TextStyle(color: Colors.white38),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12.0),
-                borderSide: const BorderSide(color: Colors.white),
-              ),
+              hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : Colors.white38),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12.0),
-                borderSide: const BorderSide(color: Colors.white24),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white24),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12.0),
-                borderSide: const BorderSide(color: Colors.white),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               ),
               filled: true,
               fillColor: colorScheme.surfaceContainerHigh,
@@ -933,7 +929,7 @@ class _AddAccountBottomSheetState extends ConsumerState<_AddAccountBottomSheet> 
           TextField(
             controller: _amountController,
             keyboardType: TextInputType.number,
-            style: const TextStyle(color: Colors.white),
+            style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
             inputFormatters: [
               FilteringTextInputFormatter.allow(RegExp(r'[0-9.]')),
             ],
@@ -954,21 +950,17 @@ class _AddAccountBottomSheetState extends ConsumerState<_AddAccountBottomSheet> 
             },
             decoration: InputDecoration(
               labelText: "Nominal Awal",
-              labelStyle: const TextStyle(color: Colors.white),
-              hintStyle: const TextStyle(color: Colors.white38),
+              labelStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white70),
+              hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : Colors.white38),
               prefixText: "Rp ",
-              prefixStyle: const TextStyle(color: Colors.white),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12.0),
-                borderSide: const BorderSide(color: Colors.white),
-              ),
+              prefixStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12.0),
-                borderSide: const BorderSide(color: Colors.white24),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white24),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(12.0),
-                borderSide: const BorderSide(color: Colors.white),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               ),
               filled: true,
               fillColor: colorScheme.surfaceContainerHigh,

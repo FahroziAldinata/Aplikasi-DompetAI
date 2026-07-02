@@ -228,8 +228,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                                   )
                                 : Text(
                                     message.text,
-                                    style: TextStyle(
-                                      color: colorScheme.onSurface,
+                                    style: const TextStyle(
+                                      color: Colors.white,
                                       fontSize: 14.0,
                                     ),
                                   ),
@@ -583,20 +583,30 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
           Expanded(
             child: TextField(
               controller: _controller,
-              style: TextStyle(color: colorScheme.onSurface),
+              style: TextStyle(
+                color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+              ),
               decoration: InputDecoration(
                 hintText: 'Catat transaksi Anda di sini...',
-                hintStyle: const TextStyle(color: Colors.white),
+                hintStyle: TextStyle(
+                  color: Theme.of(context).brightness == Brightness.light ? Colors.grey : Colors.white38,
+                ),
                 border: InputBorder.none,
                 filled: true,
                 fillColor: colorScheme.surfaceContainer,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide.none,
+                  borderSide: BorderSide(
+                    color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.transparent,
+                    width: 1.0,
+                  ),
                   borderRadius: BorderRadius.circular(24.0),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide.none,
+                  borderSide: BorderSide(
+                    color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+                    width: 1.5,
+                  ),
                   borderRadius: BorderRadius.circular(24.0),
                 ),
               ),
@@ -810,14 +820,25 @@ class _EditTransactionDialogState extends State<_EditTransactionDialog> {
             TextField(
               controller: _amountController,
               keyboardType: TextInputType.number,
-              style: TextStyle(color: colorScheme.onSurface),
+              style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               inputFormatters: [
                 FilteringTextInputFormatter.digitsOnly,
               ],
               decoration: InputDecoration(
                 hintText: 'Masukkan nominal',
-                hintStyle: TextStyle(color: colorScheme.onSurfaceVariant.withValues(alpha: 0.5)),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : colorScheme.onSurfaceVariant.withValues(alpha: 0.5)),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                    color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : colorScheme.outline,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                    color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+                  ),
+                ),
                 contentPadding: const EdgeInsets.symmetric(horizontal: 12.0),
               ),
             ),
@@ -829,10 +850,21 @@ class _EditTransactionDialogState extends State<_EditTransactionDialog> {
               initialValue: _categories.contains(_category) ? _category : 'lainnya',
               dropdownColor: colorScheme.surfaceContainer,
               decoration: InputDecoration(
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                    color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : colorScheme.outline,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                    color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+                  ),
+                ),
                 contentPadding: const EdgeInsets.symmetric(horizontal: 12.0),
               ),
-              items: _categories.map((c) => DropdownMenuItem(value: c, child: Text(c, style: TextStyle(color: colorScheme.onSurface)))).toList(),
+              items: _categories.map((c) => DropdownMenuItem(value: c, child: Text(c, style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : colorScheme.onSurface)))).toList(),
               onChanged: (val) {
                 setState(() {
                   _category = val;
@@ -845,11 +877,22 @@ class _EditTransactionDialogState extends State<_EditTransactionDialog> {
             const SizedBox(height: 6.0),
             TextField(
               controller: _accountController,
-              style: TextStyle(color: colorScheme.onSurface),
+              style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               decoration: InputDecoration(
                 hintText: 'Contoh: Cash, BCA, OVO',
-                hintStyle: TextStyle(color: colorScheme.onSurfaceVariant.withValues(alpha: 0.5)),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : colorScheme.onSurfaceVariant.withValues(alpha: 0.5)),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                    color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : colorScheme.outline,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                    color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+                  ),
+                ),
                 contentPadding: const EdgeInsets.symmetric(horizontal: 12.0),
               ),
             ),
@@ -859,11 +902,22 @@ class _EditTransactionDialogState extends State<_EditTransactionDialog> {
             const SizedBox(height: 6.0),
             TextField(
               controller: _descController,
-              style: TextStyle(color: colorScheme.onSurface),
+              style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               decoration: InputDecoration(
                 hintText: 'Detail belanjaan',
-                hintStyle: TextStyle(color: colorScheme.onSurfaceVariant.withValues(alpha: 0.5)),
-                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0)),
+                hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : colorScheme.onSurfaceVariant.withValues(alpha: 0.5)),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                    color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : colorScheme.outline,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(
+                    color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white,
+                  ),
+                ),
                 contentPadding: const EdgeInsets.symmetric(horizontal: 12.0),
               ),
             ),

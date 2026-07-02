@@ -550,19 +550,24 @@ class SavingGoalsScreen extends ConsumerWidget {
               TextField(
                 controller: controller,
                 keyboardType: TextInputType.number,
-                style: TextStyle(color: colorScheme.onSurface),
+                style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
                 inputFormatters: [
                   FilteringTextInputFormatter.digitsOnly,
                 ],
                 decoration: InputDecoration(
                   hintText: "Contoh: 5.000.000",
+                  hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : Colors.white38),
                   prefixText: "Rp ",
-                  prefixStyle: TextStyle(color: colorScheme.primary),
+                  prefixStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
                   filled: true,
                   fillColor: colorScheme.surfaceContainerHigh,
-                  border: OutlineInputBorder(
+                  enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12),
-                    borderSide: BorderSide.none,
+                    borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white24),
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
                   ),
                 ),
               ),
@@ -742,25 +747,21 @@ class _AddGoalBottomSheetState extends ConsumerState<AddGoalBottomSheet> {
           TextField(
             controller: _nameController,
             textCapitalization: TextCapitalization.sentences,
-            style: const TextStyle(color: Colors.white),
+            style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
             decoration: InputDecoration(
               labelText: "Nama Target",
-              labelStyle: const TextStyle(color: Colors.white70),
+              labelStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white70),
               hintText: "Contoh: Beli Laptop Baru",
-              hintStyle: const TextStyle(color: Colors.white38),
+              hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : Colors.white38),
               filled: true,
               fillColor: colorScheme.surfaceContainerHigh,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16),
-                borderSide: BorderSide.none,
-              ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
-                borderSide: const BorderSide(color: Colors.white24),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white24),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
-                borderSide: const BorderSide(color: Colors.white),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               ),
             ),
           ),
@@ -770,30 +771,26 @@ class _AddGoalBottomSheetState extends ConsumerState<AddGoalBottomSheet> {
           TextField(
             controller: _amountController,
             keyboardType: TextInputType.number,
-            style: const TextStyle(color: Colors.white),
+            style: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
             inputFormatters: [
               FilteringTextInputFormatter.digitsOnly,
             ],
             decoration: InputDecoration(
               labelText: "Target Nominal",
-              labelStyle: const TextStyle(color: Colors.white70),
+              labelStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white70),
               hintText: "0",
-              hintStyle: const TextStyle(color: Colors.white38),
+              hintStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.grey : Colors.white38),
               prefixText: "Rp ",
-              prefixStyle: const TextStyle(color: Colors.white),
+              prefixStyle: TextStyle(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               filled: true,
               fillColor: colorScheme.surfaceContainerHigh,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(16),
-                borderSide: BorderSide.none,
-              ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
-                borderSide: const BorderSide(color: Colors.white24),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white24),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(16),
-                borderSide: const BorderSide(color: Colors.white),
+                borderSide: BorderSide(color: Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
               ),
             ),
           ),
@@ -817,10 +814,12 @@ class _AddGoalBottomSheetState extends ConsumerState<AddGoalBottomSheet> {
                         ? "Pilih Tanggal Batas (Deadline)"
                         : "Batas: ${DateFormat('d MMMM yyyy', 'id_ID').format(_selectedDate!)}",
                     style: TextStyle(
-                      color: _selectedDate == null ? Colors.white38 : Colors.white,
+                      color: _selectedDate == null
+                          ? (Theme.of(context).brightness == Brightness.light ? Colors.black38 : Colors.white38)
+                          : (Theme.of(context).brightness == Brightness.light ? Colors.black : Colors.white),
                     ),
                   ),
-                  const Icon(Icons.calendar_today_rounded, size: 20, color: Colors.white70),
+                  Icon(Icons.calendar_today_rounded, size: 20, color: Theme.of(context).brightness == Brightness.light ? Colors.black54 : Colors.white70),
                 ],
               ),
             ),
