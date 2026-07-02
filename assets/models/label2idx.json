@@ -1,0 +1,10 @@
+{
+  "PAD": 0,
+  "B-ACCOUNT": 1,
+  "B-AMOUNT": 2,
+  "B-ITEM": 3,
+  "B-PERSON": 4,
+  "I-AMOUNT": 5,
+  "I-ITEM": 6,
+  "O": 7
+}

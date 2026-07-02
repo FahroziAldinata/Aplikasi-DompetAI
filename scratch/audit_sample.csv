@@ -1,0 +1,51 @@
+teks_asli|category|label_lama|label_baru|justifikasi_tertulis
+top up saldo shopeepay 275rb|campuran|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=275000|Expected amount was None but text contains clear nominal value
+subscription musik bulanan 49rb|campuran|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=49000|Expected amount was None but text contains clear nominal value
+hangout weekend 175rb|campuran|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=175000|Expected amount was None but text contains clear nominal value
+checkout smartwatch premium 1juta|campuran|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=1000000|Expected amount was None but text contains clear nominal value
+top up saldo ovo 150rb|campuran|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=150000|Expected amount was None but text contains clear nominal value
+42rb|edgecase|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=42000|Expected amount was None but text contains clear nominal value
+kurang lebih 80rb|edgecase|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=80000|Expected amount was None but text contains clear nominal value
+135rb|edgecase|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=135000|Expected amount was None but text contains clear nominal value
+38rb|edgecase|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=38000|Expected amount was None but text contains clear nominal value
+300rb kurang lebih|edgecase|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=300000|Expected amount was None but text contains clear nominal value
+fee konsultasi diterima Rp3250000 di dana|income|intent=income, cat=pemasukan, amt=None|intent=income, cat=pemasukan, amt=3250000|Expected amount was None but text contains clear nominal value
+hasil penjualan laptop cair Rp9850000 ke bca|income|intent=income, cat=pemasukan, amt=None|intent=income, cat=pemasukan, amt=9850000|Expected amount was None but text contains clear nominal value
+fee desain interior diterima Rp3475000 di rekening|income|intent=income, cat=pemasukan, amt=None|intent=income, cat=pemasukan, amt=3475000|Expected amount was None but text contains clear nominal value
+hasil panen jagung diterima Rp8450000 di cash|income|intent=income, cat=pemasukan, amt=None|intent=income, cat=pemasukan, amt=8450000|Expected amount was None but text contains clear nominal value
+honor proyek cair Rp3850000 ke mandiri|income|intent=income, cat=pemasukan, amt=None|intent=income, cat=pemasukan, amt=3850000|Expected amount was None but text contains clear nominal value
+bayar DP motor 1juta|nominal|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=1000000|Expected amount was None but text contains clear nominal value
+beli tas kerja 500rb|nominal|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=500000|Expected amount was None but text contains clear nominal value
+beli drone 4jt|nominal|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=4000000|Expected amount was None but text contains clear nominal value
+isi saldo tabungan haji 500k|nominal|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=500000|Expected amount was None but text contains clear nominal value
+beli kasur baru 3jt|nominal|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=3000000|Expected amount was None but text contains clear nominal value
+ngematcha 18k|slang|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=18000|Expected amount was None but text contains clear nominal value
+americano 20k|slang|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=20000|Expected amount was None but text contains clear nominal value
+jajanan cilok 10k|slang|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=10000|Expected amount was None but text contains clear nominal value
+ngonten harian 25rb|slang|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=25000|Expected amount was None but text contains clear nominal value
+stok teh 20rb|slang|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=20000|Expected amount was None but text contains clear nominal value
+paket data kerja 115rb|tagihan|intent=expense, cat=tagihan, amt=None|intent=expense, cat=tagihan, amt=115000|Expected amount was None but text contains clear nominal value
+angsuran iphone pro 1150rb|tagihan|intent=expense, cat=tagihan, amt=None|intent=expense, cat=tagihan, amt=1150000|Expected amount was None but text contains clear nominal value
+bayar gas usaha 145rb|tagihan|intent=expense, cat=tagihan, amt=None|intent=expense, cat=tagihan, amt=145000|Expected amount was None but text contains clear nominal value
+bayar kontrakan sama motor 2830rb|tagihan|intent=expense, cat=tagihan, amt=None|intent=expense, cat=tagihan, amt=2830000|Expected amount was None but text contains clear nominal value
+bbyr kredit motor 940rb|tagihan|intent=expense, cat=tagihan, amt=None|intent=expense, cat=tagihan, amt=940000|Expected amount was None but text contains clear nominal value
+tarik tunai dari bca Rp280000|transfer|intent=transfer, cat=transfer, amt=None|intent=transfer, cat=transfer, amt=280000|Expected amount was None but text contains clear nominal value
+isi ulang gopay Rp88000|transfer|intent=transfer, cat=transfer, amt=None|intent=transfer, cat=transfer, amt=88000|Expected amount was None but text contains clear nominal value
+isi saldo dana Rp314000|transfer|intent=transfer, cat=transfer, amt=None|intent=transfer, cat=transfer, amt=314000|Expected amount was None but text contains clear nominal value
+isi saldo shopeepay 115rb|transfer|intent=transfer, cat=transfer, amt=None|intent=transfer, cat=transfer, amt=115000|Expected amount was None but text contains clear nominal value
+top up ovo 100ribu|transfer|intent=transfer, cat=transfer, amt=None|intent=transfer, cat=transfer, amt=100000|Expected amount was None but text contains clear nominal value
+beli mkn 15rb|typo|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=15000|Expected amount was None but text contains clear nominal value
+trnasfer ke budi 100rb|typo|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=100000|Expected amount was None but text contains clear nominal value
+ngopii 20rb|typo|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=20000|Expected amount was None but text contains clear nominal value
+pinjem duit dari Raka 250rb buat servis motor|utang|intent=debt, cat=utang, amt=None|intent=debt, cat=utang, amt=250000|Expected amount was None but text contains clear nominal value
+ditagih Riko 150rb|utang|intent=debt, cat=utang, amt=None|intent=debt, cat=utang, amt=150000|Expected amount was None but text contains clear nominal value
+piutang ke Kevin 500rb|utang|intent=debt, cat=utang, amt=None|intent=debt, cat=utang, amt=500000|Expected amount was None but text contains clear nominal value
+pinjem uang dari Tegar 520rb buat modal jualan|utang|intent=debt, cat=utang, amt=None|intent=debt, cat=utang, amt=520000|Expected amount was None but text contains clear nominal value
+piutang ke Lilis 140rb|utang|intent=debt, cat=utang, amt=None|intent=debt, cat=utang, amt=140000|Expected amount was None but text contains clear nominal value
+325rb|edgecase|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=325000|Expected amount was None but text contains clear nominal value
+meeting di coworking space 98rb|campuran|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=98000|Expected amount was None but text contains clear nominal value
+dokumentasi acara 200rb|slang|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=200000|Expected amount was None but text contains clear nominal value
+sekitar 50rb|edgecase|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=50000|Expected amount was None but text contains clear nominal value
+hadiah kejutan 120rb|slang|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=120000|Expected amount was None but text contains clear nominal value
+simpan uang 200rb|slang|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=200000|Expected amount was None but text contains clear nominal value
+pergi kantor 12rb|slang|intent=expense, cat=makanan, amt=None|intent=expense, cat=makanan, amt=12000|Expected amount was None but text contains clear nominal value

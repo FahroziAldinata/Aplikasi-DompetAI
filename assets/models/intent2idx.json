@@ -1,0 +1,6 @@
+{
+  "debt": 0,
+  "expense": 1,
+  "income": 2,
+  "transfer": 3
+}

@@ -1,0 +1,42 @@
+# Flutter
+build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+*.g.dart
+*.freezed.dart
+pubspec.lock
+
+# Android
+android/.gradle/
+android/app/dompetai.jks
+android/key.properties
+android/local.properties
+android/app/google-services.json
+*.apk
+*.aab
+
+# Assets model (too large for repo)
+# UNCOMMENT if model > 100MB, ours is 0.47MB so keep:
+# assets/models/dompetai_ner.tflite
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Antigravity
+.gemini/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+*.h5

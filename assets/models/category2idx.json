@@ -1,0 +1,12 @@
+{
+  "belanja": 0,
+  "hiburan": 1,
+  "kesehatan": 2,
+  "makanan": 3,
+  "pemasukan": 4,
+  "pendidikan": 5,
+  "tagihan": 6,
+  "transfer": 7,
+  "transportasi": 8,
+  "utang": 9
+}

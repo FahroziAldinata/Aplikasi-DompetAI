@@ -1,0 +1,209 @@
+{
+  "total_cases": 8383,
+  "passed": 3872,
+  "failed": 4511,
+  "dimensions": {
+    "intent": 927,
+    "category": 3606,
+    "amount": 1681,
+    "split_len": 123
+  },
+  "category_diagnostics": {
+    "model_dependent": 2989,
+    "override_wrong": 617
+  },
+  "oov_statistics": {
+    "fail_cases_with_oov": 3632,
+    "total_oov_tokens": 5882,
+    "top_oov_words": [
+      [
+        "Dana",
+        102
+      ],
+      [
+        "Mandiri",
+        61
+      ],
+      [
+        "BCA",
+        50
+      ],
+      [
+        "35.000",
+        48
+      ],
+      [
+        "ditagih",
+        45
+      ],
+      [
+        "18.000",
+        43
+      ],
+      [
+        "BNI",
+        40
+      ],
+      [
+        "15.000",
+        36
+      ],
+      [
+        "OVO",
+        35
+      ],
+      [
+        "tunai",
+        33
+      ],
+      [
+        "85.000",
+        33
+      ],
+      [
+        "95.000",
+        33
+      ],
+      [
+        "Gopay",
+        32
+      ],
+      [
+        "cuci",
+        30
+      ],
+      [
+        "150",
+        28
+      ],
+      [
+        "trf",
+        28
+      ],
+      [
+        "65.000",
+        26
+      ],
+      [
+        "185.000",
+        25
+      ],
+      [
+        "lupa",
+        25
+      ],
+      [
+        "bayarin",
+        24
+      ],
+      [
+        "ganti",
+        23
+      ],
+      [
+        "ShopeePay",
+        23
+      ],
+      [
+        "trnasfer",
+        23
+      ],
+      [
+        "500",
+        22
+      ],
+      [
+        "200",
+        21
+      ],
+      [
+        "sabun",
+        21
+      ],
+      [
+        "98.000",
+        21
+      ],
+      [
+        "90",
+        20
+      ],
+      [
+        "300",
+        20
+      ],
+      [
+        "250",
+        19
+      ]
+    ]
+  },
+  "multi_transaction": {
+    "total_real_multi": 1,
+    "passed_real_multi": 1,
+    "false_positive_splits": 138,
+    "false_negative_splits": 0
+  },
+  "top_root_causes": [
+    [
+      "Amount extraction failure (NER and regex fallbacks both failed to extract correct amount)",
+      1681
+    ],
+    [
+      "Category wrong: BiLSTM model prediction wrong (expected 'makanan', got 'transportasi', no keyword matched)",
+      715
+    ],
+    [
+      "Category wrong: BiLSTM model prediction wrong (expected 'makanan', got 'utang', no keyword matched)",
+      523
+    ],
+    [
+      "Category wrong: BiLSTM model prediction wrong (expected 'makanan', got 'tagihan', no keyword matched)",
+      494
+    ],
+    [
+      "Category wrong: Keyword override triggered incorrectly (keyword list 'expense' matched, expected category 'makanan')",
+      472
+    ],
+    [
+      "Category wrong: BiLSTM model prediction wrong (expected 'makanan', got 'pemasukan', no keyword matched)",
+      305
+    ],
+    [
+      "Intent wrong: BiLSTM model prediction wrong (expected 'expense', got 'income')",
+      208
+    ],
+    [
+      "Intent wrong: BiLSTM model prediction wrong (expected 'transfer', got 'expense')",
+      174
+    ],
+    [
+      "Intent wrong: BiLSTM model prediction wrong (expected 'debt', got 'expense')",
+      169
+    ],
+    [
+      "Category wrong: BiLSTM model prediction wrong (expected 'makanan', got 'transfer', no keyword matched)",
+      138
+    ],
+    [
+      "False Positive Split (Single transaction split into multi)",
+      123
+    ],
+    [
+      "Intent wrong: BiLSTM model prediction wrong (expected 'expense', got 'debt')",
+      113
+    ],
+    [
+      "Category wrong: BiLSTM model prediction wrong (expected 'transfer', got 'transportasi', no keyword matched)",
+      106
+    ],
+    [
+      "Category wrong: BiLSTM model prediction wrong (expected 'utang', got 'transportasi', no keyword matched)",
+      97
+    ],
+    [
+      "Category wrong: BiLSTM model prediction wrong (expected 'makanan', got 'hiburan', no keyword matched)",
+      89
+    ]
+  ]
+}
